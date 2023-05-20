@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Tahoma, Arial;
+}
+.container {
+  width: 800px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 15px;
+}
+.container header {
+  display: flex;
+  background-color: #ffff;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.container header .category {
+  flex: 1;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  animation: change-color 2s infinite alternate;
+  color: #8b1874;
+}
+@keyframes change-color {
+  0% {
+    color: #8b1874;
+  }
+  25% {
+    color: #b71375;
+  }
+  50% {
+    color: #fc4f00;
+  }
+  75% {
+    color: #f79540;
+  }
+}
+.container header .count {
+  font-size: 14px;
+  color: gray;
+  font-weight: bold;
+}
+.answer-all {
+  background-color: #fff;
+  padding: 0 20px 20px;
+}
+.answer-all .answer {
+  padding: 15px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+.answer-all .answer label {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+  cursor: pointer;
+}
+.answer-all .answer input:checked + label {
+  color: #0075ff;
+}
+.answer-all .answer:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+.question-title {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+}
+.submit {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #0075ff;
+  color: white;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+}
+.submit:focus {
+  outline: none;
+}
+.all-span {
+  display: flex;
+  gap: 5px;
+}
+.all-span span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+}
+.all-span span.on {
+  background-color: #0075ff;
+}
+.result {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.result div {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.result div.per {
+  color: #0075ff;
+}
+
+.result div.mid {
+  color: #009688;
+}
+
+.result div.bad {
+  color: red;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: auto;
+  }
+}
